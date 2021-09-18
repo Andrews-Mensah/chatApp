@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const { SignUp } = require('../controllers/authentication/signup')
+const { Login } = require('../controllers/authentication/login')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -18,5 +19,6 @@ router.get('/register', function(req, res, next) {
 });
 
 router.post('/register', SignUp)
+router.post('/login', Login)
 
 module.exports = router;
